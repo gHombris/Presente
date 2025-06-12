@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para minha princesa</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #1a1a1a;
+            position: relative;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #backgroundCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+            max-width: 900px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 3.5em;
+            color: #FF69B4;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+        }
+
+        .content .intro-text {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #E0BBE4;
+            margin-bottom: 40px;
+        }
+        
+        .closing-message {
+            font-size: 1.5em;
+            color: #FFC0CB;
+            margin-top: 50px;
+            text-shadow: 0 0 8px rgba(255, 192, 203, 0.5);
+        }
+
+        .first-times-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+
+        .first-times-column {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .first-times-column h2 {
+            font-size: 2.2em;
+            color: #FFD700;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+        }
+
+        .first-time-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+        .first-time-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .first-time-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .first-time-item p {
+            font-size: 1.1em;
+            color: #F8F8F8;
+            line-height: 1.6;
+        }
+
+        .heart{
+            fill: red;
+            position: relative;
+            top: 5px;
+            width: 50px;
+            animation: pulse 1s ease infinite;
+        }
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.3);}
+            100% {transform: scale(1);}
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5em;
+            }
+            .content .intro-text {
+                font-size: 1.1em;
+            }
+            .first-times-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .first-times-column {
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+
+    <div class="content">
+        <h1>💕FELIZ DIA DOS NAMORADOS💕</h1>
+        <p class="intro-text">OIIII MEU AMOR HOJE É DIA DOS NAMORADOS WKDHAOWHSOSA, eu to tão feliz meu bem de um jeito que nem consigo explicar msm a gnt não se vendo nesse dia é algo muito especial para mim, de verdade. É o nosso primeiro dias dos namorados (eu nunca comemorei um antes e eu sou muito grato por você ser a única pessoa com a qual eu vou comemorar essa data).</p>
+        <p class="intro-text">Eu lembro de tudo meu amor, cada segundo que a gente passou um do lado do outro e longe tbm, cada conversa, cada risada, cada briga, cada "eu te amo", são tantas coisas que a gente viveu até aqui amor, eu não consigo nem chutar um número para dizer quantas vezes eu admirei os seus olhinhos. e é tão estranho amor pq assim como parece que o tempo passou tão rápido, parece que a gnt ta a vida inteira juntos e em cada segundo que se passou amor, eu só senti meu amor por você crescer cada vez mais e mais, sem parar. meu coração ta completamente cheio do seu amor meu bem, você me completa, você ilumina minha vida. Eu te amo mais que tudo</p>
+        <p class="intro-text">Você é uma pessoa tão graciosa meu bem, você é a pessoa mais incrível que já conheci na minha vida é minha princesinha linda. Você é tantas coisas meu bem que é até difícil citar todas suas qualidades, sabe? você é tão forte amor, tão inteligente, tão dedicada em tudo que você faz, tão carinhosa, tão talentosa, tão divertida(eu amo rir com você amor e ouvir a sua risada) , tão linda.. muito linda mesmos. eu só tenho a agradecer por ter uma companheira tão incrível ao meu lado, ao seu lado sou o homem mais feliz desse mundo.</p>
+        <p class="intro-text">eu não vejo a hora da gnt dar mais um passo e morar juntas amor, eu fico tão ansioso imaginando nosso futuro, nossa casinha, nosso casamento, nossos filhos.. (eu nem sei se eu aguento viver dps do casamento, vc vai estar tão linda cm o vestido de noiva que meu coraçãozinho não vai aguentar 🥺) fico imaginando nossa filhinha com seus olhinhos lindos amor. 🥺 meu coração fica muito quentinho quando penso nessas coisas amor</p>
+        <p class="intro-text">eu te amo mais que tudo minha princesinha linda. você sempre vai ser o amor da minha vida e meu coração se enche de alegria nesse dia tão especial ao lado de alguém tão incrível como você meu bem.</p>
+        
+        <div class="first-times-container">
+            <div class="first-times-column left">
+                <h2>O Início de Tudo 💖</h2>
+                <div class="first-time-item">
+                    <img src="img/pconversa.jpg" alt="nossa primeira conversa">
+                    <p>Nossa primeira conversa</p>
+                </div>
+                <div class="first-time-item">
+                    <img src="img/pviu.jpg" alt="dia em que nos vimos pela primeira vez pessoalmente">
+                    <p>A primeira vez que a gente se viu</p>
+                </div>
+                <div class="first-time-item">
+                    <img src="img/pfilha.jpg" alt="nossa primeira filha ">
+                    <p>Nossa primeira filha</p>
+                </div>
+            </div>
+
+            <div class="first-times-column right">
+                <h2> ✨</h2>
+                <div class="first-time-item">
+                    <img src="img/pencontro.jpg" alt="nosso primeiro encontro ">
+                    <p>nosso primeiro encontro</p>
+                </div>
+                <div class="first-time-item">
+                    <img src="img/pvez.jpg" alt="nossa primeira vez juntos">
+                    <p>nossa primeira vez</p>
+                </div>
+                <div class="first-time-item">
+                    <img src="img/sd.jpg" alt=" primeiro Dia dos Namorados">
+                    <p>nosso primeiro dia dos namorados</p>
+                </div>
+            </div>
+        </div>
+        <p class="closing-message">você é minha alma gêmea , eu te amo muito mesmo     - com amor todo amor, Gabriel</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('backgroundCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = document.body.scrollHeight > window.innerHeight ? document.body.scrollHeight : window.innerHeight; 
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = document.body.scrollHeight > window.innerHeight ? document.body.scrollHeight : window.innerHeight;
+        });
+
+        window.addEventListener('scroll', () => {
+            canvas.height = document.body.scrollHeight > window.innerHeight ? document.body.scrollHeight : window.innerHeight;
+        });
+
+        const particles = [];
+        const numParticles = 100;
+        const connectionDistance = 150;
+        const maxLineWidth = 2;
+
+        const colors = [
+            'rgba(255, 105, 180, 0.8)',
+            'rgba(200, 50, 200, 0.8)',
+            'rgba(255, 0, 255, 0.8)',
+            'rgba(255, 150, 255, 0.8)'
+        ];
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.8;
+                this.vy = (Math.random() - 0.5) * 0.8;
+                this.radius = Math.random() * 1.5 + 0.5;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < numParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) { 
+                    const p1 = particles[i];
+                    const p2 = particles[j];
+                    const distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+
+                    if (distance < connectionDistance) {
+                        ctx.beginPath();
+                        const opacity = (1 - distance / connectionDistance).toFixed(2);
+                        const lineWidth = maxLineWidth * (1 - distance / connectionDistance);
+                        ctx.strokeStyle = p1.color.replace('0.8', opacity);
+                        ctx.lineWidth = lineWidth;
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+
+            requestAnimationFrame(animate); 
+        }
+
+        init();
+        animate();
+    </script>
+</body>
+</html>
